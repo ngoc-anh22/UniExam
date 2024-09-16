@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <title>Tính Điểm Thi THPT QG 2025</title>
+</head>
+<body>
+  <div class=" bgcontainer">
+    <h1>Tính điểm thi THPT QG năm 2025</h1>
+    <div class="container">
+      <form action="/calculate" method="POST">
+        <div class="form-group">
+          <label for="literature">Môn Ngữ văn:</label>
+          <input type="number" name="literature" placeholder="Hãy nhập điểm của bạn" required>
+        </div>
+        <div class="form-group">
+          <label for="mathematics">Môn Toán:</label>
+          <input type="number" name="mathematics" placeholder="Hãy nhập điểm của bạn" required>
+        </div>  
+        <div class="form-group">
+          <label for="elective">Môn tự chọn:</label>
+          <input type="number" name="elective" placeholder="Hãy nhập điểm của bạn" required>
+        </div>  
+        <div class="form-group">
+          <label>Bạn có miễn thi môn Ngoại ngữ không?</label>
+          <input type="radio" name="exemption" value="yes" id="exemption_yes">
+          <label for="exemption_yes">Có</label>
+          <input type="radio" name="exemption" value="no" id="exemption_no">
+          <label for="exemption_no">Không</label>
+        </div> 
+        <div class="form-group" id="foreign_language_section">
+          <label for="foreign_language">Môn Ngoại ngữ:</label>
+          <input type="number" name="foreign_language" placeholder="Hãy nhập điểm của bạn">
+        </div> 
+          <div class="form-group">
+            <label for="incentive">Điểm khuyến khích (nếu có):</label>
+            <input type="number" name="incentive" placeholder="Hãy nhập điểm của bạn" required>
+          </div>  
+        <div class="form-group">
+          <label for="avg_10">Trung bình môn lớp 10:</label>
+          <input type="number" name="avg_10" placeholder="Hãy nhập điểm của bạn" required>
+        </div> 
+        <div class="form-group">
+          <label for="avg_11">Trung bình môn lớp 11:</label>
+          <input type="number" name="avg_11" placeholder="Hãy nhập điểm của bạn" required>
+        </div> 
+        <div class="form-group">
+          <label for="avg_12">Trung bình môn lớp 12:</label>
+          <input type="number" name="avg_12" placeholder="Hãy nhập điểm của bạn" required>
+        </div> 
+        <div class="form-group">
+          <label for="priority">Điểm ưu tiên (nếu có):</label>
+          <input type="number" name="priority" placeholder="Hãy nhập điểm của bạn" required>
+        </div>
+        <button type="submit">Tính điểm</button>
+      </form>
+      {% if total_score is not none %}
+        <h2>Số điểm của bạn là: {{ total_score }}</h2>
+      {% endif %}
+    </div>
+  </div>
+</body>
+</html>

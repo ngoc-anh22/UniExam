@@ -1,0 +1,83 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    background-color: #fcfcfc;
+    color: #046865;
+    margin: 0;
+    padding: 50px;
+}
+
+.bgcontainer {
+    max-width: 1200px;
+    margin: auto;
+    background: #F2F7F7;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: #FFFFFF;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    color: #03045E;
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: #03045E;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex; /* Hiển thị flex để đặt lên cùng một dòng */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-bottom: 15px; /* Khoảng cách giữa các nhóm */
+} 
+
+label {
+    margin-right: 50px;
+    width: 250px;
+}
+
+input[type="number"], input[type="text"] {
+    flex: 1; /* Chiều rộng tự động */
+    padding: 10px; /* Khoảng cách bên trong */
+    border: 1px solid #ccc; /* Đường viền */
+    border-radius: 5px; /* Bo tròn góc */
+    box-sizing: border-box; /* Tính toán chiều rộng */
+    background-color: #F2F7F7; /* Màu nền cho input */
+}
+
+input[type="radio"] {
+    width: auto; /* Chiều rộng tự động */
+    display: inline-block; /* Hiển thị inline */
+}
+
+button {
+    display: block;
+    margin: 30px auto;
+    width: 15%;
+    padding: 10px;
+    background-color: #03045E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #0505c0;
+}
